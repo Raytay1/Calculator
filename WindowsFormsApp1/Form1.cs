@@ -67,45 +67,39 @@ namespace WindowsFormsApp1
 
         private void DivideButton_Click(object sender, EventArgs e)
         {
-            if (numbers.Count == 0)
-            {
-                numbers.Enqueue(this.CalcResults.Text + "/");
-                OpFlag = true;
-            }
+            numbers.Enqueue(this.CalcResults.Text + "/");
+            OpFlag = true;
         }
 
         private void MultiplyButton_Click(object sender, EventArgs e)
         {
-            if (numbers.Count == 0)
-            {
-                numbers.Enqueue(this.CalcResults.Text + "*");
-                OpFlag = true;
-            }
+            numbers.Enqueue(this.CalcResults.Text + "*");
+            OpFlag = true;
+            
         }
 
         private void MinusButton_Click(object sender, EventArgs e)
         {
-            if (numbers.Count == 0)
-            {
-                numbers.Enqueue(this.CalcResults.Text + "-");
-                OpFlag = true;
-            }
+            numbers.Enqueue(this.CalcResults.Text + "-");
+            OpFlag = true;
+            
         }
 
         private void PlusButton_Click(object sender, EventArgs e)
         {
-            if(numbers.Count == 0)
-            {
-                numbers.Enqueue(this.CalcResults.Text + "+");
-                OpFlag = true;
-            }
+            numbers.Enqueue(this.CalcResults.Text + "+");
+            OpFlag = true;
             
             
         }
 
         private void EqualsButton_Click(object sender, EventArgs e)
         {
-
+            numbers.Enqueue(this.CalcResults.Text);
+            OpFlag = true;
+            foreach (var x in numbers)
+                Console.WriteLine(x);
+            
         }
 
         #endregion Operators
